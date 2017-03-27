@@ -102,7 +102,7 @@ sub register {
 	unless( $name && $name =~ /[[:print:]\w]/ ) {
 		$name = "Not supplied";
 	}
-	unless( $version && $version =~ /\d+(?:\.\d+)?/ ) {
+	unless( defined $version && $version =~ /\d+(?:\.\d+)?/ ) {
 		$version = "NaN";
 	}
 	$pkg_info->{gui_entry} =
